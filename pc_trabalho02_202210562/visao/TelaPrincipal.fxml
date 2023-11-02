@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPanePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #72C7A1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.TelaPrincipalController">
+  <children>
+    <ImageView>
+      <image>
+        <Image url="@../img/cenario.png" />
+      </image>
+    </ImageView>
+    <ImageView layoutX="257.0">
+      <image>
+        <Image url="@../img/trilhos.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="iconTrem2" layoutX="324.0" layoutY="-18.0">
+      <image>
+        <Image url="@../img/trem.png" />
+      </image>
+    </ImageView>
+    <ImageView layoutX="33.0" layoutY="191.0">
+      <image>
+        <Image url="@../img/fundomenu.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="tituloVelocidade" layoutX="53.0" layoutY="216.0">
+      <image>
+        <Image url="@../img/tituloVelocidade.png" />
+      </image>
+    </ImageView>
+    <Slider fx:id="velocidadeTrem1" blockIncrement="25.0" layoutX="64.0" layoutY="258.0" minorTickCount="0" onMouseReleased="#mudarVelocidadeTrem1" prefHeight="33.0" prefWidth="104.0" showTickLabels="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Slider>
+    <Slider fx:id="velocidadeTrem2" blockIncrement="25.0" layoutX="61.0" layoutY="305.0" minorTickCount="0" onMouseReleased="#mudarVelocidadeTrem2" prefHeight="25.0" prefWidth="104.0" showTickLabels="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Slider>
+    <Button fx:id="btnResetar" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="98.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#resetar" onMouseEntered="#mouseOn" onMouseExited="#mouseOff" prefHeight="25.0" prefWidth="45.0" style="-fx-background-radius: 10; -fx-background-radius: 10; -fx-background-color: #4E9B68;" text="Resetar" textAlignment="CENTER" textFill="#c7e4d7" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="491.0" AnchorPane.topAnchor="349.0">
+     <font>
+       <Font name="Consolas Bold" size="8.5" />
+     </font>
+    </Button>
+    <Button fx:id="btnSolucao" contentDisplay="TEXT_ONLY" layoutX="117.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#mudarSolucao" onMouseEntered="#mouseOn" onMouseExited="#mouseOff" prefHeight="25.0" prefWidth="45.0" style="-fx-background-radius: 10; -fx-background-radius: 10; -fx-background-color: #4E9B68;" text="Solucao" textAlignment="CENTER" textFill="#c7e4d7">
+     <font>
+        <Font name="Consolas Bold" size="8.5" />
+     </font>
+    </Button>
+    <ImageView layoutX="35.0" layoutY="398.0">
+         <image>
+            <Image url="@../img/pokemons.png" />
+         </image>
+    </ImageView>
+    <ImageView fx:id="iconTrem1" layoutX="258.0" layoutY="-18.0">
+         <image>
+            <Image url="@../img/trem2.png" />
+         </image>
+      </ImageView>
+    <ImageView layoutX="5.0" layoutY="247.0">
+      <image>
+        <Image url="@../img/flor.png" />
+      </image>
+    </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="118.0" layoutX="242.0" layoutY="180.0" opacity="0.84">
+         <image>
+            <Image url="@../img/sombra.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="118.0" layoutX="242.0" layoutY="373.0" opacity="0.84">
+         <image>
+            <Image url="@../img/sombra.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="130.0" fitWidth="110.0" layoutX="245.0" layoutY="77.0">
+         <image>
+            <Image url="@../img/tunel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="110.0" layoutX="245.0" layoutY="270.0">
+         <image>
+            <Image url="@../img/tunel.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="364.0" layoutY="120.0">
+         <image>
+            <Image url="@../img/placa.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="364.0" layoutY="314.0">
+         <image>
+            <Image url="@../img/placa.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="menuSolucao" layoutX="36.0" layoutY="189.0" prefHeight="200.0" prefWidth="158.0" visible="false">
+         <children>
+            <RadioButton fx:id="sol1" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="14.0" layoutY="66.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#selecionarSolucao" prefHeight="18.0" prefWidth="129.0" text="Var. de Travamento" textAlignment="CENTER" textFill="#644134">
+               <font>
+                  <Font name="Consolas Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="toogleGroup2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="sol2" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="15.0" layoutY="100.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#selecionarSolucao" prefHeight="18.0" prefWidth="129.0" text="Estrita Alternância" textAlignment="CENTER" textFill="#644134" toggleGroup="$toogleGroup2">
+               <font>
+                  <Font name="Consolas Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton fx:id="sol3" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="15.0" layoutY="134.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#selecionarSolucao" prefHeight="18.0" prefWidth="129.0" text="Solução de Peterson" textAlignment="CENTER" textFill="#644134" toggleGroup="$toogleGroup2">
+               <font>
+                  <Font name="Consolas Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <ImageView fitHeight="30.0" fitWidth="93.0" layoutX="31.0" layoutY="25.0">
+               <image>
+                  <Image url="@../img/tituloSolucao.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnConfirmarSol" layoutX="65.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#confirmarSolucao" onMouseEntered="#mouseOn" onMouseExited="#mouseOff" prefHeight="25.0" prefWidth="23.0" style="-fx-background-radius: 10; -fx-background-radius: 10; -fx-background-color: #4E9B68;" text="✔" textFill="#c7e4d7">
+               <font>
+                  <Font name="Consolas Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menuPosicao" layoutX="36.0" layoutY="189.0" prefHeight="195.0" prefWidth="155.0" visible="false">
+         <children>
+          <ImageView fx:id="tituloPosicao" layoutX="25.0" layoutY="17.0">
+           <image>
+             <Image url="@../img/tituloPosicao.png" />
+           </image>
+          </ImageView>
+          <Button fx:id="btnConfirmarOp" layoutX="64.0" layoutY="162.0" mnemonicParsing="false" onAction="#confirmarOpcao" onMouseEntered="#mouseOn" onMouseExited="#mouseOff" prefHeight="25.0" prefWidth="23.0" style="-fx-background-radius: 10; -fx-background-radius: 10; -fx-background-color: #4E9B68;" text="✔" textFill="#c7e4d7">
+           <font>
+             <Font name="Consolas Bold" size="12.0" />
+           </font>
+          </Button>
+          <RadioButton fx:id="op3" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="26.0" layoutY="107.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#posicionarTrens" prefHeight="18.0" prefWidth="104.0" text="Alternado I" textAlignment="CENTER" textFill="#644134">
+           <font>
+             <Font name="Consolas Bold" size="12.0" />
+           </font>
+           <cursor>
+             <Cursor fx:constant="HAND" />
+           </cursor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroup" />
+               </toggleGroup>
+          </RadioButton>
+          <RadioButton fx:id="op2" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="26.0" layoutY="75.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#posicionarTrens" prefHeight="18.0" prefWidth="104.0" text="Superior" textAlignment="CENTER" textFill="#644134" toggleGroup="$toggleGroup">
+            <font>
+              <Font name="Consolas Bold" size="12.0" />
+            </font>
+            <cursor>
+              <Cursor fx:constant="HAND" />
+            </cursor>
+          </RadioButton>
+          <RadioButton fx:id="op1" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="26.0" layoutY="47.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#posicionarTrens" prefHeight="18.0" prefWidth="104.0" text="Inferior" textAlignment="CENTER" textFill="#644134" toggleGroup="$toggleGroup">
+               <font>
+                  <Font name="Consolas Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+          </RadioButton>
+          <RadioButton fx:id="op4" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="26.0" layoutY="138.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#posicionarTrens" prefHeight="18.0" prefWidth="117.0" text="Alternado II" textAlignment="CENTER" textFill="#644134" toggleGroup="$toggleGroup">
+            <font>
+              <Font name="Consolas Bold" size="12.0" />
+            </font>
+            <cursor>
+              <Cursor fx:constant="HAND" />
+            </cursor>
+          </RadioButton>
+         </children>
+      </AnchorPane>
+    <AnchorPane fx:id="anchorPaneInicial" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #024C95;" visible="false">
+      <children>
+        <ImageView layoutY="60.0">
+          <image>
+            <Image url="@../img/pokemonEmeraldVersion.jpg" />
+          </image>
+        </ImageView>
+        <Button fx:id="btnStart" layoutX="248.0" layoutY="232.0" mnemonicParsing="false" onAction="#iniciar" opacity="0.12" prefHeight="25.0" prefWidth="104.0">
+           <cursor>
+             <Cursor fx:constant="HAND" />
+           </cursor>
+        </Button>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
