@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #BE8FC6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainController">
+   <children>
+      <ImageView layoutX="78.0" layoutY="32.0">
+         <image>
+            <Image url="@../img/hashiras.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="141.0" layoutY="107.0">
+         <image>
+            <Image url="@../img/mesa.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hashi0" layoutX="194.0" layoutY="132.0" visible="false">
+         <image>
+            <Image url="@../img/hashi0.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hashi1" layoutX="281.0" layoutY="129.0" visible="false">
+         <image>
+            <Image url="@../img/hashi1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hashi2" layoutX="304.0" layoutY="239.0" visible="false">
+         <image>
+            <Image url="@../img/hashi2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hashi3" layoutX="245.0" layoutY="272.0" visible="false">
+         <image>
+            <Image url="@../img/hashi3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hashi4" layoutX="150.0" layoutY="240.0" visible="false">
+         <image>
+            <Image url="@../img/hashi4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plate3" layoutX="190.0" layoutY="264.0" visible="false">
+         <image>
+            <Image url="@../img/comidanoprato.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plate0" layoutX="231.0" layoutY="117.0" visible="false">
+         <image>
+            <Image url="@../img/comidanoprato.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plate2" layoutX="276.0" layoutY="264.0" visible="false">
+         <image>
+            <Image url="@../img/comidanoprato.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plate1" layoutX="307.0" layoutY="183.0" visible="false">
+         <image>
+            <Image url="@../img/comidanoprato.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plate4" layoutX="156.0" layoutY="182.0" visible="false">
+         <image>
+            <Image url="@../img/comidanoprato.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="5.0" layoutY="170.0">
+         <image>
+            <Image url="@../img/iconsSliders.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="velComer4" blockIncrement="1.0" layoutX="28.0" layoutY="171.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedEat" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <Slider fx:id="velPensar4" blockIncrement="1.0" layoutX="28.0" layoutY="198.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedThink" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <Button fx:id="btnPause4" layoutX="28.0" layoutY="220.0" mnemonicParsing="false" onAction="#pause" prefHeight="24.0" prefWidth="24.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" textAlignment="CENTER" textFill="#dddbdd">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="imgPlayPause4">
+               <image>
+                  <Image url="@../img/iconPause.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Slider fx:id="velComer0" blockIncrement="1.0" layoutX="165.0" layoutY="50.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedEat" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <ImageView layoutX="142.0" layoutY="49.0">
+         <image>
+            <Image url="@../img/iconsSliders.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="velPensar0" blockIncrement="1.0" layoutX="165.0" layoutY="77.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedThink" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <Button fx:id="btnPause0" layoutX="165.0" layoutY="99.0" mnemonicParsing="false" onAction="#pause" prefHeight="24.0" prefWidth="24.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" textAlignment="CENTER" textFill="#e7e3e8">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="imgPlayPause0">
+               <image>
+                  <Image url="@../img/iconPause.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Slider fx:id="velComer1" blockIncrement="1.0" layoutX="451.0" layoutY="182.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedEat" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <ImageView layoutX="428.0" layoutY="181.0">
+         <image>
+            <Image url="@../img/iconsSliders.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="velPensar1" blockIncrement="1.0" layoutX="451.0" layoutY="209.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedThink" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <Button fx:id="btnPause1" layoutX="451.0" layoutY="231.0" mnemonicParsing="false" onAction="#pause" prefHeight="24.0" prefWidth="24.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" textAlignment="CENTER" textFill="#e7e3e8">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="imgPlayPause1">
+               <image>
+                  <Image url="@../img/iconPause.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Slider fx:id="velComer2" blockIncrement="1.0" layoutX="394.0" layoutY="321.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedEat" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <ImageView layoutX="371.0" layoutY="320.0">
+         <image>
+            <Image url="@../img/iconsSliders.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="velPensar2" blockIncrement="1.0" layoutX="394.0" layoutY="348.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedThink" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <Button fx:id="btnPause2" layoutX="394.0" layoutY="370.0" mnemonicParsing="false" onAction="#pause" prefHeight="24.0" prefWidth="24.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" textAlignment="CENTER" textFill="#e7e3e8">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="imgPlayPause2">
+               <image>
+                  <Image url="@../img/iconPause.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Slider fx:id="velComer3" blockIncrement="1.0" layoutX="90.0" layoutY="322.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedEat" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <ImageView layoutX="67.0" layoutY="321.0">
+         <image>
+            <Image url="@../img/iconsSliders.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="velPensar3" blockIncrement="1.0" layoutX="90.0" layoutY="349.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onMouseReleased="#changeSpeedThink" prefHeight="14.0" prefWidth="48.0" showTickMarks="true" snapToTicks="true">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+      <Button fx:id="btnPause3" layoutX="90.0" layoutY="371.0" mnemonicParsing="false" onAction="#pause" prefHeight="24.0" prefWidth="24.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" textAlignment="CENTER" textFill="#e7e3e8">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="imgPlayPause3">
+               <image>
+                  <Image url="@../img/iconPause.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="ballon0" layoutX="263.0" layoutY="7.0">
+         <image>
+            <Image url="@../img/b0.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ballon1" layoutX="396.0" layoutY="117.0">
+         <image>
+            <Image url="@../img/b1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ballon2" layoutX="348.0" layoutY="257.0">
+         <image>
+            <Image url="@../img/b2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ballon3" layoutX="114.0" layoutY="269.0">
+         <image>
+            <Image url="@../img/b3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ballon4" layoutX="55.0" layoutY="117.0">
+         <image>
+            <Image url="@../img/b4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="61.0" layoutX="436.0" layoutY="338.0" rotate="90.0">
+         <image>
+            <Image url="@../img/cantos.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waiting0" layoutX="273.0" layoutY="17.0" visible="false">
+         <image>
+            <Image url="@../img/blocked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waiting1" layoutX="400.0" layoutY="128.0" visible="false">
+         <image>
+            <Image url="@../img/blocked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waiting2" layoutX="355.0" layoutY="270.0" visible="false">
+         <image>
+            <Image url="@../img/blocked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waiting3" layoutX="115.0" layoutY="270.0" visible="false">
+         <image>
+            <Image url="@../img/blocked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="waiting4" layoutX="58.0" layoutY="123.0" visible="false">
+         <image>
+            <Image url="@../img/blocked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="speech0" fitHeight="40.0" fitWidth="52.0" layoutX="269.0" layoutY="12.0" visible="false">
+         <image>
+            <Image url="@../img/balaoFala.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="speech1" fitHeight="40.0" fitWidth="52.0" layoutX="396.0" layoutY="122.0" visible="false">
+         <image>
+            <Image url="@../img/balaoFala.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="speech2" fitHeight="40.0" fitWidth="52.0" layoutX="346.0" layoutY="262.0" visible="false">
+         <image>
+            <Image url="@../img/balaoFala.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="speech3" fitHeight="40.0" fitWidth="52.0" layoutX="106.0" layoutY="274.0" visible="false">
+         <image>
+            <Image url="@../img/balaoFala.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="speech4" fitHeight="40.0" fitWidth="52.0" layoutX="51.0" layoutY="121.0" visible="false">
+         <image>
+            <Image url="@../img/balaoFala.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="352.0" layoutY="1.0">
+         <image>
+            <Image url="@../img/pergaminho.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="-6.0" layoutY="-6.0" rotate="-90.0">
+         <image>
+            <Image url="@../img/cantos.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelRengoku" layoutX="379.0" layoutY="9.0" prefHeight="17.0" prefWidth="100.0" styleClass="custom-font-label" text="Rengoku:" />
+      <Label fx:id="labelMitsuri" layoutX="379.0" layoutY="24.0" prefHeight="17.0" prefWidth="100.0" styleClass="custom-font-label" text="Mitsuri:" />
+      <Label fx:id="labelShinobu" layoutX="379.0" layoutY="41.0" prefHeight="17.0" prefWidth="100.0" styleClass="custom-font-label" text="Shinobu:" />
+      <Label fx:id="labelTokito" layoutX="379.0" layoutY="58.0" prefHeight="17.0" prefWidth="100.0" styleClass="custom-font-label" text="Tokito: " />
+      <Label fx:id="labelIguro" layoutX="379.0" layoutY="74.0" prefHeight="17.0" prefWidth="100.0" styleClass="custom-font-label" text="Iguro: " />
+      <Button fx:id="btnResetar" layoutX="49.0" layoutY="15.0" mnemonicParsing="false" onAction="#reset" prefHeight="35.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" textAlignment="CENTER" textFill="#b797bf">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../img/reset.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="inicialAnchorPane" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #BE8FC6;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView layoutX="1.0" layoutY="-10.0">
+               <image>
+                  <Image url="@../img/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="275.0" layoutY="-22.0">
+               <image>
+                  <Image url="@../img/desenhoPrincipal.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnPlay" contentDisplay="CENTER" layoutX="175.0" layoutY="321.0" mnemonicParsing="false" onAction="#showMainScreen" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../img/play.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
