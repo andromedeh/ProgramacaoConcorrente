@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPanePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #72C7A1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.TelaPrincipalController">
+  <children>
+    <ImageView>
+      <image>
+        <Image url="@../img/cenario.png" />
+      </image>
+    </ImageView>
+    <ImageView layoutX="257.0">
+      <image>
+        <Image url="@../img/trilhos.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="iconTrem2" layoutX="324.0" layoutY="400.0">
+      <image>
+        <Image url="@../img/trem.png" />
+      </image>
+    </ImageView>
+    <ImageView layoutX="33.0" layoutY="191.0">
+      <image>
+        <Image url="@../img/fundomenu.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="tituloVelocidade" layoutX="53.0" layoutY="216.0" visible="false">
+      <image>
+        <Image url="@../img/tituloVelocidade.png" />
+      </image>
+    </ImageView>
+    <Slider fx:id="velocidadeTrem1" blockIncrement="25.0" layoutX="64.0" layoutY="258.0" minorTickCount="0" onMouseReleased="#movimentarTrem1" prefHeight="33.0" prefWidth="104.0" showTickLabels="true" snapToTicks="true" visible="false">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+    <Slider fx:id="velocidadeTrem2" blockIncrement="25.0" layoutX="61.0" layoutY="305.0" minorTickCount="0" onMouseReleased="#movimentarTrem2" prefHeight="25.0" prefWidth="104.0" showTickLabels="true" snapToTicks="true" visible="false">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Slider>
+    <ImageView fx:id="tituloPosicao" layoutX="59.0" layoutY="205.0">
+     <image>
+       <Image url="@../img/tituloPosicao.png" />
+     </image>
+    </ImageView>
+    <RadioButton fx:id="op1" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="58.0" layoutY="233.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#posicionarTrens" prefHeight="18.0" prefWidth="104.0" text="Inferior" textAlignment="CENTER" textFill="#644134">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleGroup" />
+         </toggleGroup>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+    </RadioButton>
+    <RadioButton fx:id="op2" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="58.0" layoutY="264.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#posicionarTrens" prefHeight="18.0" prefWidth="104.0" text="Superior" textAlignment="CENTER" textFill="#644134" toggleGroup="$toggleGroup">
+      <font>
+        <Font name="Consolas Bold" size="12.0" />
+      </font>
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+    </RadioButton>
+    <RadioButton fx:id="op3" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="58.0" layoutY="297.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#posicionarTrens" prefHeight="18.0" prefWidth="104.0" text="Alternado I" textAlignment="CENTER" textFill="#644134" toggleGroup="$toggleGroup">
+     <font>
+       <Font name="Consolas Bold" size="12.0" />
+     </font>
+     <cursor>
+       <Cursor fx:constant="HAND" />
+     </cursor>
+    </RadioButton>
+    <RadioButton fx:id="op4" alignment="CENTER_LEFT" contentDisplay="BOTTOM" layoutX="58.0" layoutY="328.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#posicionarTrens" prefHeight="18.0" prefWidth="117.0" text="Alternado II" textAlignment="CENTER" textFill="#644134" toggleGroup="$toggleGroup">
+      <font>
+        <Font name="Consolas Bold" size="12.0" />
+      </font>
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+    </RadioButton>
+    <Button fx:id="btnConfirmarOp" layoutX="98.0" layoutY="350.0" mnemonicParsing="false" onAction="#confirmarOpcao" onMouseEntered="#mouseOn" onMouseExited="#mouseOff" prefHeight="25.0" prefWidth="23.0" style="-fx-background-radius: 10; -fx-background-radius: 10; -fx-background-color: #4E9B68;" text="✔" textFill="#c7e4d7">
+     <font>
+       <Font name="Consolas Bold" size="12.0" />
+     </font>
+    </Button>
+    <Button fx:id="btnResetar" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="64.0" layoutY="349.0" mnemonicParsing="false" onAction="#resetar" onMouseEntered="#mouseOn" onMouseExited="#mouseOff" prefHeight="25.0" prefWidth="45.0" style="-fx-background-radius: 10; -fx-background-radius: 10; -fx-background-color: #4E9B68;" text="Resetar" textAlignment="CENTER" textFill="#c7e4d7" visible="false" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="491.0" AnchorPane.topAnchor="349.0">
+     <font>
+       <Font name="Consolas Bold" size="8.5" />
+     </font>
+    </Button>
+    <Button fx:id="btnDirecao" contentDisplay="TEXT_ONLY" layoutX="117.0" layoutY="349.0" mnemonicParsing="false" onAction="#mudarDirecao" onMouseEntered="#mouseOn" onMouseExited="#mouseOff" prefHeight="25.0" prefWidth="45.0" style="-fx-background-radius: 10; -fx-background-radius: 10; -fx-background-color: #4E9B68;" text="Direcao" textAlignment="CENTER" textFill="#c7e4d7" visible="false">
+     <font>
+        <Font name="Consolas Bold" size="8.5" />
+     </font>
+    </Button>
+    <Polyline fx:id="descidaTrem1" fill="#f8f8f8" layoutX="-225.0" points="257.0, 14.0, 257.0, 61.0, 290.0, 90.0, 290.0, 168.0, 329.0, 194.0, 329.0, 257.0, 290.0, 284.0, 290.0, 359.0, 257.0, 390.0, 257.0, 467.0" strokeMiterLimit="1.0" strokeType="INSIDE" visible="false" />
+    <Polyline fx:id="subidaTrem1" fill="#f8f8f8" layoutX="-225.0" layoutY="-380.0" points="255.0, 400.0, 257.0, 353.0, 290.0, 333.0, 290.0, 251.0, 325.0, 217.0, 325.0, 157.0, 290.0, 127.0, 290.0, 56.0, 257.0, 25.0, 257.0, -80.0" strokeMiterLimit="1.0" strokeType="INSIDE" />
+    <Polyline fx:id="descidaTrem2" fill="#f8f8f8" layoutX="-290.0" points="324.0, 12.0, 324.0, 55.0, 289.0, 78.0, 289.0, 162.0, 257.0, 183.0, 257.0, 248.0, 289.0, 279.0, 289.0, 358.0, 324.0, 386.0, 324.0, 464.0" strokeMiterLimit="1.0" strokeType="INSIDE" visible="false" />
+    <Polyline fx:id="subidaTrem2" fill="#f8f8f8" layoutX="-275.0" layoutY="-380.0" points="309.0, 400.0, 309.0, 355.0, 273.0, 329.0, 273.0, 251.0, 242.0, 220.0, 242.0, 159.0, 272.9999694824219, 133.0, 273.0, 51.0, 309.0, 27.0, 309.0, -62.0" strokeMiterLimit="1.0" strokeType="INSIDE" visible="false" />
+    <ImageView layoutX="35.0" layoutY="398.0">
+         <image>
+            <Image url="@../img/pokemons.png" />
+         </image>
+    </ImageView>
+    <ImageView fx:id="iconTrem1" layoutX="225.0" layoutY="3.0">
+         <image>
+            <Image url="@../img/trem2.png" />
+         </image>
+      </ImageView>
+    <ImageView layoutX="5.0" layoutY="247.0">
+      <image>
+        <Image url="@../img/flor.png" />
+      </image>
+    </ImageView>
+    <AnchorPane fx:id="anchorPaneInicial" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #024C95;" visible="false">
+      <children>
+        <ImageView layoutY="60.0">
+          <image>
+            <Image url="@../img/pokemonEmeraldVersion.jpg" />
+          </image>
+        </ImageView>
+        <Button fx:id="btnStart" layoutX="248.0" layoutY="232.0" mnemonicParsing="false" onAction="#iniciar" opacity="0.12" prefHeight="25.0" prefWidth="104.0">
+           <cursor>
+             <Cursor fx:constant="HAND" />
+           </cursor>
+        </Button>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
