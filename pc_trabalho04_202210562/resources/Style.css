@@ -1,0 +1,64 @@
+
+.slider .thumb {
+  -fx-background-color: #E02636;
+}
+
+.slider .track {
+  -fx-background-color: #F8E0BA;
+}
+
+.slider .filled-track {
+  -fx-background-color: #E02636;
+}
+
+.slider .thumb:hover {
+  -fx-background-color: #E02636;
+  -fx-effect: dropshadow(three-pass-box, #F8E0BA, 10, 0.5, 0, 0);
+}
+
+.slider .thumb:active {
+  -fx-background-color: #9c1823;
+  -fx-effect: dropshadow(three-pass-box, #F8E0BA, 10, 0.5, 0, 0);
+}
+
+.custom-font-label {
+  -fx-font-family: "Korean Calligraphy"; 
+  -fx-font-size: 12;
+  -fx-text-fill: #E02636;
+}
+
+.progress-bar {
+  -fx-background-color: #F8E0BA; /* Cor de fundo da barra de progresso */
+  -fx-background-radius: 30px;
+  -fx-border-radius: 30px;
+  -fx-accent: #E02636; /* Cor da barra de progresso preenchida */
+}
+
+.progress-bar .track {
+  -fx-background-color: #F8E0BA; /* Cor da trilha da barra de progresso */
+}
+.button {
+  -fx-background-color: #E02636;
+  -fx-background-radius: 30px;
+  -fx-border-radius: 30px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+
+.button:hover {
+  -fx-background-color: #e9685c;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0.5, 0, 0);
+  -fx-cursor: HAND;
+}
+
+.button:pressed {
+  -fx-background-color: #e9685c;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0.5, 0, 0);
+  -fx-cursor: CLOSED_HAND;
+}
+
+#btnOpen {
+  -fx-font-family: "Super Milk";
+  -fx-font-size: 12;
+  -fx-text-fill: #000000;
+}
+
